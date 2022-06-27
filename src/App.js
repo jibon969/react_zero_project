@@ -1,12 +1,14 @@
+import "./App.css";
+import Header from "./components/Header/Header";
+import Footer from "./components/Footer/Footer";
 
-import './App.css';
-
-function App() {
+const App = () => {
   return (
     <div className="App">
-      <h2 className='bg-info'>Hello World React !</h2>
+      <Header />
+      <Footer />
     </div>
   );
-}
+};
 
 export default App;
