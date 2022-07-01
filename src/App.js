@@ -1,10 +1,11 @@
+import React from "react";
 import "./App.css";
-import Home from "./pages/Home/Home";
+import HandleRouter from "./Routes/HandleRouter";
 
 const App = () => {
   return (
     <div className="App">
-      <Home />
+      <HandleRouter />
     </div>
   );
 };
