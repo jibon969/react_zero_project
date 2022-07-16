@@ -1,0 +1,11 @@
+1. React API Call Best Practice
+    https://medium.com/swlh/react-api-call-best-practice-c78e14a7e150
+
+2. Clean API Call With React Hooks
+    https://betterprogramming.pub/clean-api-call-with-react-hooks-3bd6438a375a
+
+3. How to manage API calls in React
+    https://dev.to/adyasha8105/how-to-manage-api-calls-in-react-11a8
+
+4. api data fetching best practice in react
+    https://stackoverflow.com/questions/69933661/api-data-fetching-best-practice-in-react
