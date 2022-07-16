@@ -1,7 +1,7 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
-import Home from "../pages/Home/Home";
-import About from "../pages/About/About";
+import Home from "../views/Home/Home";
+import About from "../views/About/About";
 
 const HandleRouter = () => {
   return (
