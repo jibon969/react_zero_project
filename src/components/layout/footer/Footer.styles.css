@@ -1,0 +1,112 @@
+#footer_section {
+  padding: 30px;
+  color: #fff;
+  background-color: #233040;
+}
+.help ul li a {
+  text-decoration: none;
+  color: #fff;
+}
+.help ul li a:hover {
+  color: #ff0 !important;
+  font-size: 15px;
+}
+.social-nav {
+  padding: 0;
+  list-style: none;
+  display: inline-block;
+  margin: 1em 0 0;
+}
+.social-nav li {
+  display: inline-block;
+  margin: 0 6px;
+}
+.social-nav a {
+  display: inline-block;
+  float: none;
+  width: 30px;
+  height: 30px;
+  text-decoration: none;
+  cursor: pointer;
+  text-align: center;
+  line-height: 30px;
+  background: #000;
+  position: relative;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+}
+.social3D_effect a {
+  background: 0 0 !important;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+.social3D_effect .back,
+.social3D_effect .front {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transform: translateZ(18px);
+  -moz-transform: translateZ(18px);
+  -ms-transform: translateZ(18px);
+  -o-transform: translateZ(18px);
+  transform: translateZ(18px);
+  -webkit-backface-visibility: visible;
+  -moz-backface-visibility: visible;
+  backface-visibility: visible;
+  color: #212121;
+  font-size: 12px;
+}
+.social3D_effect .back {
+  -webkit-transform: rotateX(90deg) translateZ(18px);
+  -moz-transform: rotateX(90deg) translateZ(18px);
+  -ms-transform: rotateX(90deg) translateZ(18px);
+  -o-transform: rotateX(90deg) translateZ(18px);
+  transform: rotateX(90deg) translateZ(18px);
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+a.facebook .front {
+  background: #3b5998;
+}
+.facebook .back {
+  background: #3b5998;
+}
+.social3D_effect a:hover {
+  -webkit-transform: rotateX(-90deg);
+  -moz-transform: rotateX(-90deg);
+  -ms-transform: rotateX(-90deg);
+  -o-transform: rotateX(-90deg);
+  transform: rotateX(-90deg);
+}
+.social3D_effect a:hover .back {
+  -webkit-backface-visibility: visible;
+  -moz-backface-visibility: visible;
+  backface-visibility: visible;
+}
+.social_media .front i {
+  color: #fff;
+  font-size: 12px;
+}
+.social_media .back i {
+  color: #fff;
+  font-size: 12px;
+}
+.facebook {
+  background: #3b5998;
+}
+li.share {
+  vertical-align: super;
+  font-size: 1em;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+.footer_bottom {
+  background: #485769;
+  color: #fff;
+  height: 60px;
+}

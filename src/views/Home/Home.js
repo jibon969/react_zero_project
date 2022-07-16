@@ -1,12 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Header from "../../components/Header/Header";
-import Footer from "../../components/Footer/Footer";
 
-const home = () => {
+const Home = () => {
   return (
-    <div>
-      <Header />
+    <>
       <section>
         <div className="container">
           <div className="row">
@@ -17,9 +14,8 @@ const home = () => {
           </div>
         </div>
       </section>
-      <Footer />
-    </div>
+    </>
   );
 };
 
-export default home;
+export default Home;
