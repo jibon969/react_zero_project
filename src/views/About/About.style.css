@@ -1,0 +1,15 @@
+
+#aboutSection{
+    overflow: hidden;
+    display: block;
+    margin-top: 10px;
+}
+.aboutTitle{
+    text-align: center;
+    font-weight: bold;
+}
+
+.aboutContent p{
+    text-align: justify;
+    line-height: 30px;
+}
