@@ -1,23 +1,68 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
 import "./About.style.css";
 
-const About = (props) => {
+const About = () => {
+    const [data, setData] = useState(null);
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState(null);
+
+    useEffect(() => {
+        fetch(`http://174.138.26.34/api/about-us/`)
+            .then((response) => {
+                if (!response.ok) {
+                    throw new Error(
+                        `This is an HTTP error: The status is ${response.status}`
+                    );
+                }
+                return response.json();
+            })
+            .then((actualData) => {
+                setData(actualData);
+                setError(null);
+            })
+            .catch((err) => {
+                setError(err.message);
+                setData(null);
+            })
+            .finally(() => {
+                setLoading(false);
+            });
+    }, [data]);
+
+
     return (
         <>
+
             <section id="aboutSection">
                 <div className="container">
                     <h3 className="aboutTitle">About Us</h3>
+                    <div className="errorMessage">
+                        {/*Loading Data */}
+                        {loading && <h3>A moment please...</h3>}
+
+                        {/* Errors Message */}
+                        {
+                            error && (
+                                <h6>{`There is a problem fetching the post data - ${error}`}</h6>
+                            )
+                        }
+                    </div>
+
+                    {/* Main Content */}
                     <div className="row">
-                        <div className="col-sm-12 col-md-12 col-lg-12 col-xl-12">
-                            <div className="aboutContent">
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci assumenda beatae commodi deserunt libero nam numquam obcaecati! Ad adipisci deserunt dignissimos distinctio eaque in iste iusto labore laboriosam minus, molestiae mollitia nulla provident quasi repellat velit veritatis. Ab aperiam asperiores fuga harum illo incidunt natus porro praesentium quae quis, soluta, totam vel velit, veritatis vitae. Consequuntur eveniet iste nemo, repudiandae tempora tenetur. Accusantium alias aspernatur, autem commodi culpa cupiditate debitis dolorem ducimus eaque eligendi enim error eveniet id ipsam minima minus, nostrum numquam officiis pariatur placeat porro provident quaerat quia reprehenderit sed, vel veritatis voluptatem. Cupiditate distinctio doloremque repudiandae vel.
-                                </p>
-                            </div>
-                        </div>
+                        {
+                            data && data.map((about) => (
+                                <div className="col-sm-12 col-md-12 col-lg-12 col-xl-12" key={about.index}>
+                                    <div className="aboutContent">
+                                        <div dangerouslySetInnerHTML={{__html: about.description}}/>
+                                    </div>
+                                </div>
+                            ))
+                        }
                     </div>
                 </div>
             </section>
+
         </>
     );
 };
